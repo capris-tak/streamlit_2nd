@@ -4,7 +4,7 @@ from PIL import Image
 st.title('A')
 
 image = Image.open('imgs/ansel_adams3.jpg')
-st.image(image, caption='test',use_column_width=True)
+st.image(image, caption='Original',use_column_width=True)
 
 import argparse
 import matplotlib.pyplot as plt
@@ -37,32 +37,33 @@ img_bw = postprocess_tens(tens_l_orig, torch.cat((0*tens_l_orig,0*tens_l_orig),d
 out_img_eccv16 = postprocess_tens(tens_l_orig, colorizer_eccv16(tens_l_rs).cpu())
 out_img_siggraph17 = postprocess_tens(tens_l_orig, colorizer_siggraph17(tens_l_rs).cpu())
 
-st.image(img_bw, caption='img_bw',use_column_width=True)
-st.image(out_img_eccv16, caption='out_img_eccv16',use_column_width=True)
-st.image(out_img_siggraph17, caption='out_img_siggraph17',use_column_width=True)
-'''
-plt.imsave('%s_eccv16.png'%opt.save_prefix, out_img_eccv16)
-plt.imsave('%s_siggraph17.png'%opt.save_prefix, out_img_siggraph17)
 
-plt.figure(figsize=(12,8))
-plt.subplot(2,2,1)
-plt.imshow(img)
-plt.title('Original')
-plt.axis('off')
+st.image(out_img_eccv16, caption='ECCV 16',use_column_width=True)
+st.image(out_img_siggraph17, caption='SIGGRAPH 17',use_column_width=True)
 
-plt.subplot(2,2,2)
-plt.imshow(img_bw)
-plt.title('Input')
-plt.axis('off')
 
-plt.subplot(2,2,3)
-plt.imshow(out_img_eccv16)
-plt.title('Output (ECCV 16)')
-plt.axis('off')
+#plt.imsave('%s_eccv16.png'%opt.save_prefix, out_img_eccv16)
+#plt.imsave('%s_siggraph17.png'%opt.save_prefix, out_img_siggraph17)
 
-plt.subplot(2,2,4)
-plt.imshow(out_img_siggraph17)
-plt.title('Output (SIGGRAPH 17)')
-plt.axis('off')
-plt.show()
-'''
+#plt.figure(figsize=(12,8))
+#plt.subplot(2,2,1)
+#plt.imshow(img)
+#plt.title('Original')
+#plt.axis('off')
+
+#plt.subplot(2,2,2)
+#plt.imshow(img_bw)
+#plt.title('Input')
+#plt.axis('off')
+
+#plt.subplot(2,2,3)
+#plt.imshow(out_img_eccv16)
+#plt.title('Output (ECCV 16)')
+#plt.axis('off')
+
+#plt.subplot(2,2,4)
+#plt.imshow(out_img_siggraph17)
+#plt.title('Output (SIGGRAPH 17)')
+#plt.axis('off')
+#plt.show()
+
