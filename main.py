@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from colorizers import *
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-i','--img_path', type=str, default='imgs/b.jpeg')
+parser.add_argument('-i','--img_path', type=str, default='imgs/c.jpeg')
 parser.add_argument('--use_gpu', action='store_true', help='whether to use GPU')
 parser.add_argument('-o','--save_prefix', type=str, default='saved', help='will save into this file with {eccv16.png, siggraph17.png} suffixes')
 opt = parser.parse_args()
@@ -39,18 +39,31 @@ out_img_siggraph17 = postprocess_tens(tens_l_orig, colorizer_siggraph17(tens_l_r
 
 
 col1, col2, col3 = st.columns(3)
-
 with col1:
     st.header("Original")
     st.image("imgs/ansel_adams3.jpg", use_column_width=True)
-
 with col2:
     st.header("ECCV 16")
     st.image(out_img_eccv16, use_column_width=True)
-    
 with col3:
     st.header("SIGGRAPH 17")
     st.image(out_img_siggraph17, use_column_width=True)
+	
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.image("imgs/a1.jpg", use_column_width=True)
+with col2:
+    st.image("imgs/a2.jpg", use_column_width=True)
+with col3:
+    st.image("imgs/a3.jpg", use_column_width=True)
+
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.image("imgs/b1.jpg", use_column_width=True)
+with col2:
+    st.image("imgs/b2.jpg", use_column_width=True)
+with col3:
+    st.image("imgs/b3.jpg", use_column_width=True)
 
 #st.image(image, caption='Original',use_column_width=True)
 #st.image(out_img_eccv16, caption='ECCV 16',use_column_width=True)
