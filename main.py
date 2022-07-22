@@ -3,7 +3,7 @@ from PIL import Image
 
 st.title('Image Colorization')
 
-image = Image.open('imgs/b.jpeg')
+image = Image.open('imgs/c.jpeg')
 
 
 import argparse
