@@ -18,7 +18,7 @@ if uploaded_image is not None:
 	image = Image.open(uploaded_image)
 	with io.BytesIO() as output:
 	#	img.save(output, format='JPEG')
-		binary_img = outout.getvalue()#バイナリ取得
+		binary_img = output.getvalue()#バイナリ取得
 
 
 	import argparse
