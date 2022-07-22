@@ -7,12 +7,12 @@ st.title('Image Colorization')
 uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg'])
 
 if uploaded_image is not None:
-	file_details = {"FileName":uploaded_image.name,"FileType":uploaded_image.type}
-	st.write(file_details)
-	fp = Path(file.name).suffix
-
+	#file_details = {"FileName":uploaded_image.name,"FileType":uploaded_image.type}
+	#st.write(file_details)
+	fp = Path(uploaded_image.name).suffix
+	st.write(fp)
+	st.write(type(fp))
 	#image = Image.open(uploaded_image)
-
 	#with io.BytesIO() as output:
 	#	img.save(output, format='JPEG')
 	#	binary_img = outout.getvalue()#バイナリ取得
