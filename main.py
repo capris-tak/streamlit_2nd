@@ -1,3 +1,6 @@
+import streamlit as st
+st.title('A')
+
 
 import argparse
 import matplotlib.pyplot as plt
