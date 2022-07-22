@@ -16,7 +16,7 @@ if uploaded_image is not None:
 	import matplotlib.pyplot as plt
 
 	from colorizers import *
-	fp = uploaded_image.name
+	fp = str(uploaded_image.name)
 	
 	parser = argparse.ArgumentParser()
 	parser.add_argument('-i','--img_path', type=str, default=fp)
