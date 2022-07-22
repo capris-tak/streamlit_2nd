@@ -37,6 +37,10 @@ img_bw = postprocess_tens(tens_l_orig, torch.cat((0*tens_l_orig,0*tens_l_orig),d
 out_img_eccv16 = postprocess_tens(tens_l_orig, colorizer_eccv16(tens_l_rs).cpu())
 out_img_siggraph17 = postprocess_tens(tens_l_orig, colorizer_siggraph17(tens_l_rs).cpu())
 
+st.image(img_bw, caption='img_bw',use_column_width=True)
+st.image(out_img_eccv16, caption='out_img_eccv16',use_column_width=True)
+st.image(out_img_siggraph17, caption='out_img_siggraph17',use_column_width=True)
+'''
 plt.imsave('%s_eccv16.png'%opt.save_prefix, out_img_eccv16)
 plt.imsave('%s_siggraph17.png'%opt.save_prefix, out_img_siggraph17)
 
@@ -61,3 +65,4 @@ plt.imshow(out_img_siggraph17)
 plt.title('Output (SIGGRAPH 17)')
 plt.axis('off')
 plt.show()
+'''
