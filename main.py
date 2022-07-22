@@ -1,11 +1,16 @@
 import streamlit as st
 from PIL import Image
+from pathlib import Path
 
 st.title('Image Colorization')
 
 uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg'])
 
 if uploaded_image is not None:
+	file_details = {"FileName":uploaded_image.name,"FileType":uploaded_image.type}
+	st.write(file_details)
+	fp = Path(file.name).suffix
+
 	#image = Image.open(uploaded_image)
 
 	#with io.BytesIO() as output:
@@ -19,7 +24,7 @@ if uploaded_image is not None:
 	#fp = str(uploaded_image.name)
 	
 	parser = argparse.ArgumentParser()
-	parser.add_argument('-i','--img_path', type=str, default=uploaded_image.name)
+	parser.add_argument('-i','--img_path', type=str, default=fp)
 	parser.add_argument('--use_gpu', action='store_true', help='whether to use GPU')
 	parser.add_argument('-o','--save_prefix', type=str, default='saved', help='will save into this file with {eccv16.png, siggraph17.png} suffixes')
 	opt = parser.parse_args()
@@ -34,7 +39,7 @@ if uploaded_image is not None:
 	# default size to process images is 256x256
 	# grab L channel in both original ("orig") and resized ("rs") resolutions
 	img = load_img(opt.img_path)
-	(tens_l_orig, tens_l_rs) = preprocess_img(image, HW=(256,256))
+	(tens_l_orig, tens_l_rs) = preprocess_img(img, HW=(256,256))
 	if(opt.use_gpu):
 		tens_l_rs = tens_l_rs.cuda()
 
@@ -48,7 +53,7 @@ if uploaded_image is not None:
 	col1, col2, col3 = st.columns(3)
 	with col1:
 	    st.header("Original")
-	    st.image(img_bw, use_column_width=True)
+	    st.image(img, use_column_width=True)
 	with col2:
 	    st.header("ECCV 16")
 	    st.image(out_img_eccv16, use_column_width=True)
