@@ -3,7 +3,7 @@ from PIL import Image
 
 st.title('Image Colorization')
 
-image = Image.open('imgs/1960.jpg')
+image = Image.open('imgs/ansel_adams2.jpg')
 
 
 import argparse
@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from colorizers import *
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-i','--img_path', type=str, default='imgs/1960.jpg')
+parser.add_argument('-i','--img_path', type=str, default='imgs/ansel_adams2.jpg')
 parser.add_argument('--use_gpu', action='store_true', help='whether to use GPU')
 parser.add_argument('-o','--save_prefix', type=str, default='saved', help='will save into this file with {eccv16.png, siggraph17.png} suffixes')
 opt = parser.parse_args()
@@ -41,7 +41,7 @@ out_img_siggraph17 = postprocess_tens(tens_l_orig, colorizer_siggraph17(tens_l_r
 col1, col2, col3 = st.columns(3)
 with col1:
     st.header("Original")
-    st.image("imgs/ansel_adams3.jpg", use_column_width=True)
+    st.image("imgs/ansel_adams2.jpg", use_column_width=True)
 with col2:
     st.header("ECCV 16")
     st.image(out_img_eccv16, use_column_width=True)
