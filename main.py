@@ -3,19 +3,24 @@ from PIL import Image
 
 st.title('Image Colorization')
 
-image = Image.open('imgs/ansel_adams2.jpg')
+uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg'])
 
+image = Image.open(uploaded_image)
+
+#with io.BytesIO() as output:
+#	img.save(output, format='JPEG')
+#	binary_img = outout.getvalue()#バイナリ取得
 
 import argparse
 import matplotlib.pyplot as plt
 
 from colorizers import *
 
-parser = argparse.ArgumentParser()
-parser.add_argument('-i','--img_path', type=str, default='imgs/ansel_adams2.jpg')
-parser.add_argument('--use_gpu', action='store_true', help='whether to use GPU')
-parser.add_argument('-o','--save_prefix', type=str, default='saved', help='will save into this file with {eccv16.png, siggraph17.png} suffixes')
-opt = parser.parse_args()
+#parser = argparse.ArgumentParser()
+#parser.add_argument('-i','--img_path', type=str, default='imgs/ansel_adams2.jpg')
+#parser.add_argument('--use_gpu', action='store_true', help='whether to use GPU')
+#parser.add_argument('-o','--save_prefix', type=str, default='saved', help='will save into this file with {eccv16.png, siggraph17.png} suffixes')
+#opt = parser.parse_args()
 
 # load colorizers
 colorizer_eccv16 = eccv16(pretrained=True).eval()
@@ -26,8 +31,8 @@ if(opt.use_gpu):
 
 # default size to process images is 256x256
 # grab L channel in both original ("orig") and resized ("rs") resolutions
-img = load_img(opt.img_path)
-(tens_l_orig, tens_l_rs) = preprocess_img(img, HW=(256,256))
+#img = load_img(opt.img_path)
+(tens_l_orig, tens_l_rs) = preprocess_img(image, HW=(256,256))
 if(opt.use_gpu):
 	tens_l_rs = tens_l_rs.cuda()
 
@@ -49,14 +54,7 @@ with col3:
     st.header("SIGGRAPH 17")
     st.image(out_img_siggraph17, use_column_width=True)
 
-st.caption('Landscape')
-col1, col2, col3 = st.columns(3)
-with col1:
-    st.image("imgs/a1.jpg", use_column_width=True)
-with col2:
-    st.image("imgs/a2.jpg", use_column_width=True)
-with col3:
-    st.image("imgs/a3.jpg", use_column_width=True)
+
 
 st.caption('Albert Einstein')
 col1, col2, col3 = st.columns(3)
@@ -75,6 +73,15 @@ with col2:
     st.image("imgs/c2.jpg", use_column_width=True)
 with col3:
     st.image("imgs/c3.jpg", use_column_width=True)
+
+st.caption('Landscape')
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.image("imgs/a1.jpg", use_column_width=True)
+with col2:
+    st.image("imgs/a2.jpg", use_column_width=True)
+with col3:
+    st.image("imgs/a3.jpg", use_column_width=True)
 
 #st.image(image, caption='Original',use_column_width=True)
 #st.image(out_img_eccv16, caption='ECCV 16',use_column_width=True)
