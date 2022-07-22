@@ -8,7 +8,7 @@ st.title('Image Colorization')
 uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg'])
 
 if uploaded_image is not None:
-	fp = Path(uploaded_image.name)
+	#fp = Path(uploaded_image.name)
  
 	#file_details = {"FileName":uploaded_image.name,"FileType":uploaded_image.type}
 	#st.write(file_details)
@@ -27,7 +27,7 @@ if uploaded_image is not None:
 	from colorizers import *
 	
 	parser = argparse.ArgumentParser()
-	parser.add_argument('-i','--img_path', type=str, default = binary_img)
+	parser.add_argument('-i','--img_path', type=str, default = Path(binary_img))
 	parser.add_argument('--use_gpu', action='store_true', help='whether to use GPU')
 	parser.add_argument('-o','--save_prefix', type=str, default='saved', help='will save into this file with {eccv16.png, siggraph17.png} suffixes')
 	opt = parser.parse_args()
