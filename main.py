@@ -15,13 +15,17 @@ if uploaded_image is not None:
 	#st.write(file_details)
 	#img_path = uploaded_image.name#.suffix
 	#st.write(Path(uploaded_image.name))
-	st.write(uploaded_image)
-	st.write(type(uploaded_image))
+	bytes_data = uploaded_image.read()
+	image = Image.open(io.BytesIO(bytes_data))
+	st.write("filename:", uploaded_image.name)
+	st.image(image)
+#	st.write(uploaded_image)
+#	st.write(type(uploaded_image))
 	#st.write(opt)
-	_img = Image.open(uploaded_image)
-	with io.BytesIO() as output:
-		_img.save(output, format='JPEG')
-		binary_img = output.getvalue()
+#	_img = Image.open(uploaded_image)
+#	with io.BytesIO() as output:
+#		_img.save(output, format='JPEG')
+#		binary_img = output.getvalue()
 
 
 	import argparse
