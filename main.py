@@ -15,7 +15,7 @@ if uploaded_image is not None:
 	#img_path = uploaded_image.name#.suffix
 	#st.write(img_path)
 	#st.write(type(img_path))
-	image = Image.open(uploaded_image)
+	img = Image.open(uploaded_image)
 	with io.BytesIO() as output:
 		img.save(output, format='JPEG')
 		binary_img = output.getvalue()
