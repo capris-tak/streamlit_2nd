@@ -48,7 +48,8 @@ with col2:
 with col3:
     st.header("SIGGRAPH 17")
     st.image(out_img_siggraph17, use_column_width=True)
-	
+
+st.caption('Landscape')
 col1, col2, col3 = st.columns(3)
 with col1:
     st.image("imgs/a1.jpg", use_column_width=True)
@@ -57,6 +58,7 @@ with col2:
 with col3:
     st.image("imgs/a3.jpg", use_column_width=True)
 
+st.caption('Albert Einstein')
 col1, col2, col3 = st.columns(3)
 with col1:
     st.image("imgs/b1.jpg", use_column_width=True)
@@ -64,6 +66,15 @@ with col2:
     st.image("imgs/b2.jpg", use_column_width=True)
 with col3:
     st.image("imgs/b3.jpg", use_column_width=True)
+
+st.caption('Audrey Hepburn')
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.image("imgs/c1.jpg", use_column_width=True)
+with col2:
+    st.image("imgs/c2.jpg", use_column_width=True)
+with col3:
+    st.image("imgs/c3.jpg", use_column_width=True)
 
 #st.image(image, caption='Original',use_column_width=True)
 #st.image(out_img_eccv16, caption='ECCV 16',use_column_width=True)
