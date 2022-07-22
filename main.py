@@ -14,7 +14,7 @@ if uploaded_image is not None:
 	#st.write(file_details)
 	#img_path = uploaded_image.name#.suffix
 	#st.write(Path(uploaded_image.name))
-	st.write(Path(uploaded_image))
+	#st.write(Path(uploaded_image))
 	st.write(type(uploaded_image))
 	st.write(opt)
 	_img = Image.open(uploaded_image)
