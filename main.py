@@ -14,10 +14,10 @@ if uploaded_image is not None:
 	#img_path = uploaded_image.name#.suffix
 	#st.write(img_path)
 	#st.write(type(img_path))
-	#image = Image.open(uploaded_image)
-	#with io.BytesIO() as output:
+	image = Image.open(uploaded_image)
+	with io.BytesIO() as output:
 	#	img.save(output, format='JPEG')
-	#	binary_img = outout.getvalue()#バイナリ取得
+		binary_img = outout.getvalue()#バイナリ取得
 
 
 	import argparse
@@ -26,7 +26,7 @@ if uploaded_image is not None:
 	from colorizers import *
 	
 	parser = argparse.ArgumentParser()
-	parser.add_argument('-i','--img_path', type=str, default = uploaded_image.name)
+	parser.add_argument('-i','--img_path', type=str, default = binary_img.name)
 	parser.add_argument('--use_gpu', action='store_true', help='whether to use GPU')
 	parser.add_argument('-o','--save_prefix', type=str, default='saved', help='will save into this file with {eccv16.png, siggraph17.png} suffixes')
 	opt = parser.parse_args()
