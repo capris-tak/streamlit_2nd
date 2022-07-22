@@ -9,9 +9,9 @@ uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg']
 if uploaded_image is not None:
 	#file_details = {"FileName":uploaded_image.name,"FileType":uploaded_image.type}
 	#st.write(file_details)
-	fp = uploaded_image.name#.suffix
-	st.write(fp)
-	st.write(type(fp))
+	img_path = uploaded_image.name#.suffix
+	st.write(img_path)
+	st.write(type(img_path))
 	#image = Image.open(uploaded_image)
 	#with io.BytesIO() as output:
 	#	img.save(output, format='JPEG')
@@ -23,7 +23,7 @@ if uploaded_image is not None:
 	from colorizers import *
 	
 	parser = argparse.ArgumentParser()
-	parser.add_argument('-i','--img_path', type=str, default=fp)
+	parser.add_argument('-i','--img_path', type=str)
 	parser.add_argument('--use_gpu', action='store_true', help='whether to use GPU')
 	parser.add_argument('-o','--save_prefix', type=str, default='saved', help='will save into this file with {eccv16.png, siggraph17.png} suffixes')
 	opt = parser.parse_args()
