@@ -7,10 +7,8 @@ st.title('Image Colorization')
 uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg'])
 
 if uploaded_image is not None:
-	with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
-            fp = Path(uploaded_image.name)
-            fp.write_bytes(uploaded_image.getvalue())
-            st.write(fp)
+	fp = Path(uploaded_image.name)
+ 
 	#file_details = {"FileName":uploaded_image.name,"FileType":uploaded_image.type}
 	#st.write(file_details)
 	#img_path = uploaded_image.name#.suffix
@@ -20,6 +18,7 @@ if uploaded_image is not None:
 	#with io.BytesIO() as output:
 	#	img.save(output, format='JPEG')
 	#	binary_img = outout.getvalue()#バイナリ取得
+
 
 	import argparse
 	import matplotlib.pyplot as plt
@@ -31,7 +30,8 @@ if uploaded_image is not None:
 	parser.add_argument('--use_gpu', action='store_true', help='whether to use GPU')
 	parser.add_argument('-o','--save_prefix', type=str, default='saved', help='will save into this file with {eccv16.png, siggraph17.png} suffixes')
 	opt = parser.parse_args()
-
+	print(opt)
+	
 	# load colorizers
 	colorizer_eccv16 = eccv16(pretrained=True).eval()
 	colorizer_siggraph17 = siggraph17(pretrained=True).eval()
