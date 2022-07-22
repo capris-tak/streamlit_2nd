@@ -11,7 +11,7 @@ if uploaded_image is not None:
 	#st.write(file_details)
 	fp = Path(uploaded_image.name)#.suffix
 	st.write(fp)
-	#st.write(type(fp))
+	st.write(type(fp))
 	#image = Image.open(uploaded_image)
 	#with io.BytesIO() as output:
 	#	img.save(output, format='JPEG')
