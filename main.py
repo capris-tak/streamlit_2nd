@@ -7,6 +7,10 @@ st.title('Image Colorization')
 uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg'])
 
 if uploaded_image is not None:
+	with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
+            fp = Path(uploaded_image.name)
+            fp.write_bytes(uploaded_image.getvalue())
+            st.write(fp)
 	#file_details = {"FileName":uploaded_image.name,"FileType":uploaded_image.type}
 	#st.write(file_details)
 	#img_path = uploaded_image.name#.suffix
