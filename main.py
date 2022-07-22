@@ -16,10 +16,10 @@ if uploaded_image is not None:
 	import matplotlib.pyplot as plt
 
 	from colorizers import *
-	img_path = str(uploaded_image.name)
+	#fp = str(uploaded_image.name)
 	
 	parser = argparse.ArgumentParser()
-	#parser.add_argument('-i','--img_path', type=str, default=fp)
+	parser.add_argument('-i','--img_path', type=str, default=uploaded_image.name)
 	parser.add_argument('--use_gpu', action='store_true', help='whether to use GPU')
 	parser.add_argument('-o','--save_prefix', type=str, default='saved', help='will save into this file with {eccv16.png, siggraph17.png} suffixes')
 	opt = parser.parse_args()
@@ -48,7 +48,7 @@ if uploaded_image is not None:
 	col1, col2, col3 = st.columns(3)
 	with col1:
 	    st.header("Original")
-	    st.image(fp, use_column_width=True)
+	    st.image(img_bw, use_column_width=True)
 	with col2:
 	    st.header("ECCV 16")
 	    st.image(out_img_eccv16, use_column_width=True)
