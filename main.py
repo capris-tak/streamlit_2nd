@@ -5,7 +5,7 @@ st.title('Image Colorization')
 
 uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg'])
 
-if ploaded_image is not None:
+if uploaded_image is not None:
 	#image = Image.open(uploaded_image)
 
 	#with io.BytesIO() as output:
