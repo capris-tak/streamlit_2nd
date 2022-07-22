@@ -4,7 +4,7 @@ from PIL import Image
 st.title('Image Colorization')
 
 image = Image.open('imgs/ansel_adams3.jpg')
-st.image(image, caption='Original',use_column_width=True)
+
 
 import argparse
 import matplotlib.pyplot as plt
@@ -38,8 +38,23 @@ out_img_eccv16 = postprocess_tens(tens_l_orig, colorizer_eccv16(tens_l_rs).cpu()
 out_img_siggraph17 = postprocess_tens(tens_l_orig, colorizer_siggraph17(tens_l_rs).cpu())
 
 
-st.image(out_img_eccv16, caption='ECCV 16',use_column_width=True)
-st.image(out_img_siggraph17, caption='SIGGRAPH 17',use_column_width=True)
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.header("Original")
+    st.image("imgs/ansel_adams3.jpg", use_column_width=True)
+
+with col2:
+    st.header("ECCV 16")
+    st.image(out_img_eccv16, use_column_width=True)
+    
+with col3:
+    st.header("SIGGRAPH 17")
+    st.image(out_img_siggraph17, use_column_width=True)
+
+#st.image(image, caption='Original',use_column_width=True)
+#st.image(out_img_eccv16, caption='ECCV 16',use_column_width=True)
+#st.image(out_img_siggraph17, caption='SIGGRAPH 17',use_column_width=True)
 
 
 #plt.imsave('%s_eccv16.png'%opt.save_prefix, out_img_eccv16)
