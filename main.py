@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 
-st.title('A')
+st.title('Image Colorization')
 
 image = Image.open('imgs/ansel_adams3.jpg')
 st.image(image, caption='Original',use_column_width=True)
