@@ -27,7 +27,7 @@ if(opt.use_gpu):
 # default size to process images is 256x256
 # grab L channel in both original ("orig") and resized ("rs") resolutions
 img = load_img(opt.img_path)
-(tens_l_orig, tens_l_rs) = preprocess_img(img, HW=(512,512))
+(tens_l_orig, tens_l_rs) = preprocess_img(img, HW=(256,256))
 if(opt.use_gpu):
 	tens_l_rs = tens_l_rs.cuda()
 
