@@ -1,6 +1,10 @@
 import streamlit as st
+from Pillow import Image
+
 st.title('A')
 
+image = Image.open('imgs/ansel_adams3.jpg')
+st.image(image, caption='test',use_column_width=True)
 
 import argparse
 import matplotlib.pyplot as plt
