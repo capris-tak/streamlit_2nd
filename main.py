@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 from pathlib import Path
 import numpy as np
+import tempfile
 import io
 
 st.title('Image Colorization')
@@ -9,16 +10,24 @@ st.title('Image Colorization')
 uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg'])
 
 if uploaded_image is not None:
-	#fp = Path(uploaded_image.name)
+        with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
+            #st.markdown("## Original PDF file")
+            fp = Path(tmp_file.name)
+            fp.write_bytes(uploaded_image.getvalue())
+            st.write(tmp_file.name)
+
+	
+#	fp = Path(uploaded_image.name)
  
-	file_details = {"FileName":uploaded_image.name,"FileType":uploaded_image.type}
-	st.write(file_details)
-	CDIR = os.getcwd()
-	upimg = Image.open(uploaded_image)
-	st.image(img,height=250,width=250)
-	with open(os.path.join(CDIR, uploaded_image.name),'wb') as f:
-		f.write(uploaded_image.getbuffer())
-	st.success('saved')
+#	file_details = {"FileName":uploaded_image.name,"FileType":uploaded_image.type}
+#	st.write(file_details)
+#	CDIR = os.getcwd()
+#	upimg = Image.open(uploaded_image)
+#	st.image(img,height=250,width=250)
+#	with open(os.path.join(CDIR, uploaded_image.name),'wb') as f:
+#		f.write(uploaded_image.getbuffer())
+#	st.success('saved')
+	
 	#img_path = uploaded_image.name#.suffix
 	#st.write(Path(uploaded_image.name))
 #	bytes_data = uploaded_image.read()
