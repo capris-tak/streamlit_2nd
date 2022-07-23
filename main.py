@@ -13,7 +13,7 @@ if uploaded_image is not None:
 	with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
 		fp = Path(tmp_file.name)
 		fp.write_bytes(uploaded_image.getvalue())
-		st.write(tmp_file.name)
+		#st.write(tmp_file.name)
 		#st.write(tmpdir)
 		#st.write(type(tmpdir))
 		#st.write(Path(uploaded_image.name))
@@ -98,8 +98,9 @@ if uploaded_image is not None:
 	with col3:
 	    st.header("SIGGRAPH 17")
 	    st.image(out_img_siggraph17, use_column_width=True)
+	st.image(out_img_siggraph17, use_column_width=True)
 
-
+st.caption('EXAMPLES')
 
 st.caption('Albert Einstein')
 col1, col2, col3 = st.columns(3)
