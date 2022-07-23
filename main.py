@@ -15,7 +15,8 @@ if uploaded_image is not None:
 		st.write(type(tmpdir))
 		st.write(Path(uploaded_image.name))
 		st.write(str(Path(uploaded_image.name)))
-		with open(os.path.join(tmpdir, 'test.jpg'), 'wb') as fp:
+		st.write(os.path.join(tmpdir, str(Path(uploaded_image.name))))
+		with open(os.path.join(tmpdir, str(Path(uploaded_image.name))), 'wb') as fp:
 			fp.write_bytes(uploaded_image.getvalue())
 		#st.markdown("## Original PDF file")
 		#fp = Path(tmp_file.name)
