@@ -13,8 +13,10 @@ if uploaded_image is not None:
  
 	file_details = {"FileName":uploaded_image.name,"FileType":uploaded_image.type}
 	st.write(file_details)
+	CDIR = os.getcwd()
 	upimg = Image.open(uploaded_image)
-	with open(os.path.join('./', uploaded_image.name),'wb') as f:
+	st.image(img,height=250,width=250)
+	with open(os.path.join(CDIR, uploaded_image.name),'wb') as f:
 		f.write(uploaded_image.getbuffer())
 	st.success('saved')
 	#img_path = uploaded_image.name#.suffix
