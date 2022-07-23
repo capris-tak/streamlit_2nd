@@ -49,7 +49,7 @@ if uploaded_image is not None:
 	with io.BytesIO() as output:
 		_img.save(output, format='JPEG')
 		binary_img = output.getvalue()
-		st.write(Path(binary_image))
+		st.write(Path(binary_image.name))
 
 
 	import argparse
