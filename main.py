@@ -12,6 +12,7 @@ uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg']
 if uploaded_image is not None:
 	with tempfile.TemporaryDirectory() as tmpdir:
 		st.write(tmpdir)
+		st.write(Path(uploaded_image.name))
 		with open(os.path.join(tmpdir, uploaded_image.name), 'w+b') as fp:
 			st.write(fp)
 			fp.write_bytes(uploaded_image.getvalue())
