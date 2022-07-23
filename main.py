@@ -129,6 +129,9 @@ with col2:
 with col3:
 	st.image("imgs/a3.jpg", use_column_width=True)
 
+	
+st.caption('ECCV : The European Conference on Computer Vision is a biennial research conference with the proceedings published by Springer Science+Business Media. Similar to ICCV in scope and quality, it is held those years which ICCV is not. It is considered to be one of the top conferences in computer vision, alongside CVPR and ICCV, with an A rating from the Australian Ranking of ICT Conferences and an A1 rating from the Brazilian ministry of education. The acceptance rate for ECCV 2010 was 24.4% for posters and 3.3% for oral presentations.')
+st.caption('SIGGRAPH2017 : SIGGRAPH is the world’s largest, most influential annual conference and exhibition in computer graphics and interactive techniques: Five days of research results, demos, educational sessions, art, screenings, and hands-on interactivity featuring the community’s latest technical achievements, and three days of commercial exhibits displaying the industrys current hardware, software, and services.')
 #st.image(image, caption='Original',use_column_width=True)
 #st.image(out_img_eccv16, caption='ECCV 16',use_column_width=True)
 #st.image(out_img_siggraph17, caption='SIGGRAPH 17',use_column_width=True)
