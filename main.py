@@ -10,14 +10,14 @@ st.title('Image Colorization')
 uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg'])
 
 if uploaded_image is not None:
-	with tempfile.TemporaryDirectory() as tmpdir:
-		st.write(tmpdir)
-		st.write(type(tmpdir))
-		st.write(Path(uploaded_image.name))
-		st.write(str(Path(uploaded_image.name)))
-		st.write(tmpdir+'/'+ str(Path(uploaded_image.name)))
-		with open(tmpdir+'/'+ str(Path(uploaded_image.name)), 'wb') as fp:
-			fp.write(uploaded_image.content)
+	#with tempfile.TemporaryDirectory() as tmpdir:
+		#st.write(tmpdir)
+		#st.write(type(tmpdir))
+		#st.write(Path(uploaded_image.name))
+		#st.write(str(Path(uploaded_image.name)))
+		#st.write(tmpdir+'/'+ str(Path(uploaded_image.name)))
+		#with open(tmpdir+'/'+ str(Path(uploaded_image.name)), 'wb') as fp:
+			#fp.write(uploaded_image.content)
 		#st.markdown("## Original PDF file")
 		#fp = Path(tmp_file.name)
 		#fp.write_bytes(uploaded_image.getvalue())
@@ -44,10 +44,12 @@ if uploaded_image is not None:
 	#st.write(uploaded_image)
 	#st.write(type(uploaded_image))
 	#st.write(opt)
-	#_img = Image.open(uploaded_image)
-	#with io.BytesIO() as output:
-		#_img.save(output, format='JPEG')
-		#binary_img = output.getvalue()
+	
+	_img = Image.open(uploaded_image)
+	with io.BytesIO() as output:
+		_img.save(output, format='JPEG')
+		binary_img = output.getvalue()
+		st.write(Path(binary_image))
 
 
 	import argparse
