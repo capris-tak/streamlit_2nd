@@ -10,7 +10,10 @@ st.title('Image Colorization')
 uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg'])
 
 if uploaded_image is not None:
-	#with tempfile.TemporaryDirectory() as tmpdir:
+	with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
+		fp = Path(tmp_file.name)
+		fp.write_bytes(uploaded_image.getvalue())
+		st.write(tmp_file.name)
 		#st.write(tmpdir)
 		#st.write(type(tmpdir))
 		#st.write(Path(uploaded_image.name))
