@@ -13,7 +13,7 @@ if uploaded_image is not None:
 	with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
 		fp = Path(tmp_file.name)
 		fp.write_bytes(uploaded_image.getvalue())
-		#st.write(tmp_file.name)
+		st.write(tmp_file.name)
 		#st.write(tmpdir)
 		#st.write(type(tmpdir))
 		#st.write(Path(uploaded_image.name))
