@@ -11,14 +11,18 @@ uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg']
 if uploaded_image is not None:
 	#fp = Path(uploaded_image.name)
  
-	#file_details = {"FileName":uploaded_image.name,"FileType":uploaded_image.type}
-	#st.write(file_details)
+	file_details = {"FileName":uploaded_image.name,"FileType":uploaded_image.type}
+	st.write(file_details)
+	upimg = Image.open(uploaded_image)
+	with open(os.path.join('tempDir', uploaded_image.name),'wb') as f:
+		f.write(uploaded_image.getbuffer())
+	st.success('saved')
 	#img_path = uploaded_image.name#.suffix
 	#st.write(Path(uploaded_image.name))
-	bytes_data = uploaded_image.read()
-	image = Image.open(io.BytesIO(bytes_data))
-	st.write("filename:", uploaded_image.name)
-	st.image(image)
+#	bytes_data = uploaded_image.read()
+#	image = Image.open(io.BytesIO(bytes_data))
+#	st.write("filename:", uploaded_image.name)
+#	st.image(image)
 #	st.write(uploaded_image)
 #	st.write(type(uploaded_image))
 	#st.write(opt)
