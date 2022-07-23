@@ -11,40 +11,41 @@ uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg']
 
 if uploaded_image is not None:
         with tempfile.TemporaryDirectory() as tmpdir:
+	
 		st.write(tmpdir.name)
 		with open(os.path.join(tmpdir, uploaded_image.name), 'w+b') as fp:
 			st.write(fp)
 			fp.write_bytes(uploaded_image.getvalue())
-            #st.markdown("## Original PDF file")
-            #fp = Path(tmp_file.name)
-            #fp.write_bytes(uploaded_image.getvalue())
-            #st.write(tmp_file.name)
+		#st.markdown("## Original PDF file")
+		#fp = Path(tmp_file.name)
+		#fp.write_bytes(uploaded_image.getvalue())
+		#st.write(tmp_file.name)
 
 	
-#	fp = Path(uploaded_image.name)
+	#fp = Path(uploaded_image.name)
  
-#	file_details = {"FileName":uploaded_image.name,"FileType":uploaded_image.type}
-#	st.write(file_details)
-#	CDIR = os.getcwd()
-#	upimg = Image.open(uploaded_image)
-#	st.image(img,height=250,width=250)
-#	with open(os.path.join(CDIR, uploaded_image.name),'wb') as f:
-#		f.write(uploaded_image.getbuffer())
-#	st.success('saved')
+	#file_details = {"FileName":uploaded_image.name,"FileType":uploaded_image.type}
+	#st.write(file_details)
+	#CDIR = os.getcwd()
+	#upimg = Image.open(uploaded_image)
+	#st.image(img,height=250,width=250)
+	#with open(os.path.join(CDIR, uploaded_image.name),'wb') as f:
+		#f.write(uploaded_image.getbuffer())
+	#st.success('saved')
 	
 	#img_path = uploaded_image.name#.suffix
 	#st.write(Path(uploaded_image.name))
-#	bytes_data = uploaded_image.read()
-#	image = Image.open(io.BytesIO(bytes_data))
-#	st.write("filename:", uploaded_image.name)
-#	st.image(image)
-#	st.write(uploaded_image)
-#	st.write(type(uploaded_image))
+	#bytes_data = uploaded_image.read()
+	#image = Image.open(io.BytesIO(bytes_data))
+	#st.write("filename:", uploaded_image.name)
+	#st.image(image)
+	#st.write(uploaded_image)
+	#st.write(type(uploaded_image))
 	#st.write(opt)
-#	_img = Image.open(uploaded_image)
-#	with io.BytesIO() as output:
-#		_img.save(output, format='JPEG')
-#		binary_img = output.getvalue()
+	#_img = Image.open(uploaded_image)
+	#with io.BytesIO() as output:
+		#_img.save(output, format='JPEG')
+		#binary_img = output.getvalue()
 
 
 	import argparse
@@ -96,29 +97,29 @@ if uploaded_image is not None:
 st.caption('Albert Einstein')
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.image("imgs/b1.jpg", use_column_width=True)
+	st.image("imgs/b1.jpg", use_column_width=True)
 with col2:
-    st.image("imgs/b2.jpg", use_column_width=True)
+	st.image("imgs/b2.jpg", use_column_width=True)
 with col3:
-    st.image("imgs/b3.jpg", use_column_width=True)
+	st.image("imgs/b3.jpg", use_column_width=True)
 
 st.caption('Audrey Hepburn')
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.image("imgs/c1.jpg", use_column_width=True)
+	st.image("imgs/c1.jpg", use_column_width=True)
 with col2:
-    st.image("imgs/c2.jpg", use_column_width=True)
+	st.image("imgs/c2.jpg", use_column_width=True)
 with col3:
-    st.image("imgs/c3.jpg", use_column_width=True)
+	st.image("imgs/c3.jpg", use_column_width=True)
 
 st.caption('Landscape')
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.image("imgs/a1.jpg", use_column_width=True)
+	st.image("imgs/a1.jpg", use_column_width=True)
 with col2:
-    st.image("imgs/a2.jpg", use_column_width=True)
+	st.image("imgs/a2.jpg", use_column_width=True)
 with col3:
-    st.image("imgs/a3.jpg", use_column_width=True)
+	st.image("imgs/a3.jpg", use_column_width=True)
 
 #st.image(image, caption='Original',use_column_width=True)
 #st.image(out_img_eccv16, caption='ECCV 16',use_column_width=True)
