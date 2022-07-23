@@ -10,11 +10,15 @@ st.title('Image Colorization')
 uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg'])
 
 if uploaded_image is not None:
-        with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
+        with tempfile.TemporaryDirectory() as tmpdir:
+		st.write(tmpdir.name)
+		with open(os.path.join(tmpdir, uploaded_image.name), 'w+b') as fp:
+			st.write(fp)
+			fp.write_bytes(uploaded_image.getvalue())
             #st.markdown("## Original PDF file")
-            fp = Path(tmp_file.name)
-            fp.write_bytes(uploaded_image.getvalue())
-            st.write(tmp_file.name)
+            #fp = Path(tmp_file.name)
+            #fp.write_bytes(uploaded_image.getvalue())
+            #st.write(tmp_file.name)
 
 	
 #	fp = Path(uploaded_image.name)
