@@ -98,9 +98,7 @@ if uploaded_image is not None:
 	with col3:
 	    st.header("SIGGRAPH 17")
 	    st.image(out_img_siggraph17, use_column_width=True)
-		
-	st.caption('SIGGRAPH 17')
-	st.image(out_img_siggraph17, use_column_width=True)
+
 
 st.caption('EXAMPLES')
 
