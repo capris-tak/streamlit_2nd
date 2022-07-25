@@ -7,7 +7,7 @@ import io
 
 st.title('Image Colorization')
 
-uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg'])
+uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg','webp'])
 
 if uploaded_image is not None:
 	with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
