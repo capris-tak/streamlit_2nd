@@ -366,6 +366,54 @@ with col2:
 with col3:
 	st.image("imgs/aa3.jpg", use_column_width=True)
 	
+
+st.write('A woman holding a baseball bat in her hands.')
+col1, col2, col3 = st.columns(3)
+with col1:
+	st.image("imgs/bb1.jpg", use_column_width=True)
+with col2:
+	st.image("imgs/bb2.jpg", use_column_width=True)
+with col3:
+	st.image("imgs/bb3.jpg", use_column_width=True)
+
+	
+st.write('A train yard with several train tracks and a train on one of them.')
+col1, col2, col3 = st.columns(3)
+with col1:
+	st.image("imgs/cc1.jpg", use_column_width=True)
+with col2:
+	st.image("imgs/cc2.jpg", use_column_width=True)
+with col3:
+	st.image("imgs/cc3.jpg", use_column_width=True)
+
+
+st.write('A river with rocks and a waterfall running through it.')
+col1, col2, col3 = st.columns(3)
+with col1:
+	st.image("imgs/dd1.jpg", use_column_width=True)
+with col2:
+	st.image("imgs/dd2.jpg", use_column_width=True)
+with col3:
+	st.image("imgs/dd3.jpg", use_column_width=True)
+	
+
+st.write('A man walking down a street past a tall building.')
+col1, col2, col3 = st.columns(3)
+with col1:
+	st.image("imgs/ee1.jpg", use_column_width=True)
+with col2:
+	st.image("imgs/ee2.jpg", use_column_width=True)
+with col3:
+	st.image("imgs/ee3.jpg", use_column_width=True)
+	
+st.write('A group of men in uniform with a dog.')
+col1, col2, col3 = st.columns(3)
+with col1:
+	st.image("imgs/ff1.jpg", use_column_width=True)
+with col2:
+	st.image("imgs/ff2.jpg", use_column_width=True)
+with col3:
+	st.image("imgs/ff3.jpg", use_column_width=True)
 	
 	
 st.write('ECCV : The European Conference on Computer Vision is a biennial research conference with the proceedings published by Springer Science+Business Media. Similar to ICCV in scope and quality, it is held those years which ICCV is not. It is considered to be one of the top conferences in computer vision, alongside CVPR and ICCV, with an A rating from the Australian Ranking of ICT Conferences and an A1 rating from the Brazilian ministry of education. The acceptance rate for ECCV 2010 was 24.4% for posters and 3.3% for oral presentations.')
