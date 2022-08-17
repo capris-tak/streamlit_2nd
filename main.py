@@ -5,7 +5,7 @@ import numpy as np
 import tempfile
 import io
 
-st.title('Image Colorization')
+st.header('Image Colorization')
 
 uploaded_image = st.file_uploader('Choose an image..',type=['png', 'jpg','jpeg','webp'])
 
@@ -100,7 +100,7 @@ if uploaded_image is not None:
 	    st.image(out_img_siggraph17, use_column_width=True)
 
 
-st.caption('EXAMPLES')
+st.subheader('EXAMPLES')
 
 st.write('Albert Einstein')
 col1, col2, col3 = st.columns(3)
