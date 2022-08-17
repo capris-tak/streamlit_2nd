@@ -101,9 +101,9 @@ if uploaded_image is not None:
 
 
 st.subheader('EXAMPLES')
-st.markdown('each explanation is from ClipCap(CLIP model + GPT2 tokenizer)')
+st.markdown('each explanation from ClipCap(CLIP model + GPT2 tokenizer) and Japanese from google transform')
 
-st.write('A man with a beard and glasses standing in front of a table.')
+st.write('A man with a beard and glasses standing in front of a table.テーブルの前に立っているひげと眼鏡を持った男。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.write("Original")
@@ -116,7 +116,7 @@ with col3:
 	st.image("imgs/b3.jpg", use_column_width=True)
 
 
-st.write('A river with a bridge crossing it and a forest in the background.')
+st.write('A river with a bridge crossing it and a forest in the background.それを横切る橋がある川と背景に森があります。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/a1.jpg", use_column_width=True)
@@ -126,7 +126,7 @@ with col3:
 	st.image("imgs/a3.jpg", use_column_width=True)
 
 
-st.write('A woman taking a picture of herself with a camera.')
+st.write('A woman taking a picture of herself with a camera.カメラで自分の写真を撮っている女性。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/d1.jpg", use_column_width=True)
@@ -136,7 +136,7 @@ with col3:
 	st.image("imgs/d3.jpg", use_column_width=True)
 
 
-st.write('A woman sitting in a car looking out the window.')
+st.write('A woman sitting in a car looking out the window.窓の外を見ている車に座っている女性。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/e1.jpg", use_column_width=True)
@@ -146,7 +146,7 @@ with col3:
 	st.image("imgs/e3.jpg", use_column_width=True)
 
 
-st.write('A woman sitting on a bed with a quilt.')
+st.write('A woman sitting on a bed with a quilt.キルトと一緒にベッドに座っている女性。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/c1.jpg", use_column_width=True)
@@ -156,7 +156,7 @@ with col3:
 	st.image("imgs/c3.jpg", use_column_width=True)
 	
 	
-st.write('A large clock tower with a circular ring around it.')
+st.write('A large clock tower with a circular ring around it.周囲に円形のリングが付いた大きな時計塔。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/f1.jpg", use_column_width=True)
@@ -166,7 +166,7 @@ with col3:
 	st.image("imgs/f3.jpg", use_column_width=True)
 
 
-st.write('A woman wearing a black hat and a black coat.')
+st.write('A woman wearing a black hat and a black coat.黒い帽子と黒いコートを着た女性。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/g1.jpg", use_column_width=True)
@@ -176,7 +176,7 @@ with col3:
 	st.image("imgs/g3.jpg", use_column_width=True)
 
 
-st.write('A cat sitting on a table next to a potted plant.')
+st.write('A cat sitting on a table next to a potted plant.鉢植えの植物の隣のテーブルの上に座っている猫。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/h1.jpg", use_column_width=True)
@@ -186,7 +186,7 @@ with col3:
 	st.image("imgs/h3.jpg", use_column_width=True)
 
 
-st.write('A tall building with lots of signs on it.')
+st.write('A tall building with lots of signs on it.標識がたくさんある高層ビル。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/i1.jpg", use_column_width=True)
@@ -196,7 +196,7 @@ with col3:
 	st.image("imgs/i3.jpg", use_column_width=True)
 
 
-st.write('A building with a lot of windows and a ceiling fan.')
+st.write('A building with a lot of windows and a ceiling fan.窓がたくさんあり、天井ファンがたくさんある建物。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/j1.jpg", use_column_width=True)
@@ -206,7 +206,7 @@ with col3:
 	st.image("imgs/j3.jpg", use_column_width=True)
 
 	
-st.write('A city street filled with lots of traffic.')
+st.write('A city street filled with lots of traffic.多くの交通で満たされた街の通り。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/k1.jpg", use_column_width=True)
@@ -216,7 +216,7 @@ with col3:
 	st.image("imgs/k3.jpg", use_column_width=True)
 
 
-st.write('A train is traveling down the tracks in a city.')
+st.write('A train is traveling down the tracks in a city.列車が都市の線路を下っています。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/l1.jpg", use_column_width=True)
