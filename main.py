@@ -137,7 +137,7 @@ with col1:
 with col2:
 	st.image("imgs/d2.jpg", use_column_width=True)
 with col3:
-	st.image("imgs/ad3.jpg", use_column_width=True)
+	st.image("imgs/d3.jpg", use_column_width=True)
 
 
 st.write('each explanation is from ClipCap')
