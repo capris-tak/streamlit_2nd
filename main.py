@@ -103,7 +103,7 @@ if uploaded_image is not None:
 st.subheader('EXAMPLES')
 st.markdown('each explanation is from ClipCap')
 
-st.write('A man with a beard and glasses standing in front of a table. Albert Einstein')
+st.write('A man with a beard and glasses standing in front of a table.')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/b1.jpg", use_column_width=True)
@@ -143,7 +143,7 @@ with col3:
 	st.image("imgs/e3.jpg", use_column_width=True)
 
 
-st.write('A woman sitting on a bed with a quilt. Audrey Hepburn')
+st.write('A woman sitting on a bed with a quilt.')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/c1.jpg", use_column_width=True)
