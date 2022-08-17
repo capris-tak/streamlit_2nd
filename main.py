@@ -106,10 +106,13 @@ st.markdown('each explanation is from ClipCap')
 st.write('A man with a beard and glasses standing in front of a table.')
 col1, col2, col3 = st.columns(3)
 with col1:
+	st.write("Original")
 	st.image("imgs/b1.jpg", use_column_width=True)
 with col2:
+	st.write("ECCV 16")
 	st.image("imgs/b2.jpg", use_column_width=True)
 with col3:
+	st.write("SIGGRAPH 17")
 	st.image("imgs/b3.jpg", use_column_width=True)
 
 
