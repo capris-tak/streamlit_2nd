@@ -103,8 +103,7 @@ if uploaded_image is not None:
 st.subheader('EXAMPLES')
 st.write('each explanation from ClipCap(CLIP model + GPT2 tokenizer) and Japanese from googletrans.')
 
-st.caption('A man with a beard and glasses standing in front of a table.')
-st.caption('テーブルの前に立っているひげと眼鏡を持った男。')
+st.caption('A man with a beard and glasses standing in front of a table. テーブルの前に立っているひげと眼鏡を持った男。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.write("Original")
