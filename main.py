@@ -101,7 +101,7 @@ if uploaded_image is not None:
 
 
 st.subheader('EXAMPLES')
-st.write('each explanation is from ClipCap')
+st.markdown('each explanation is from ClipCap')
 
 st.write('A man with a beard and glasses standing in front of a table. Albert Einstein')
 col1, col2, col3 = st.columns(3)
