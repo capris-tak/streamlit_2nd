@@ -245,6 +245,36 @@ with col2:
 with col3:
 	st.image("imgs/o3.jpg", use_column_width=True)
 	
+
+st.write('A close up of a person wearing a hooded jacket.')
+col1, col2, col3 = st.columns(3)
+with col1:
+	st.image("imgs/p1.jpg", use_column_width=True)
+with col2:
+	st.image("imgs/p2.jpg", use_column_width=True)
+with col3:
+	st.image("imgs/p3.jpg", use_column_width=True)
+
+	
+st.write('A black and white photo of a woman with a tie.')
+col1, col2, col3 = st.columns(3)
+with col1:
+	st.image("imgs/q1.jpg", use_column_width=True)
+with col2:
+	st.image("imgs/q2.jpg", use_column_width=True)
+with col3:
+	st.image("imgs/q3.jpg", use_column_width=True)
+
+
+st.write('.')
+col1, col2, col3 = st.columns(3)
+with col1:
+	st.image("imgs/r1.jpg", use_column_width=True)
+with col2:
+	st.image("imgs/r2.jpg", use_column_width=True)
+with col3:
+	st.image("imgs/r3.jpg", use_column_width=True)
+	
 	
 st.write('ECCV : The European Conference on Computer Vision is a biennial research conference with the proceedings published by Springer Science+Business Media. Similar to ICCV in scope and quality, it is held those years which ICCV is not. It is considered to be one of the top conferences in computer vision, alongside CVPR and ICCV, with an A rating from the Australian Ranking of ICT Conferences and an A1 rating from the Brazilian ministry of education. The acceptance rate for ECCV 2010 was 24.4% for posters and 3.3% for oral presentations.')
 st.write('SIGGRAPH2017 : SIGGRAPH is the world’s largest, most influential annual conference and exhibition in computer graphics and interactive techniques: Five days of research results, demos, educational sessions, art, screenings, and hands-on interactivity featuring the community’s latest technical achievements, and three days of commercial exhibits displaying the industrys current hardware, software, and services.')
