@@ -106,13 +106,13 @@ st.write('each explanation from ClipCap(CLIP model + GPT2 tokenizer) and Japanes
 st.caption('A man with a beard and glasses standing in front of a table. テーブルの前に立っているひげと眼鏡を持った男。')
 col1, col2, col3 = st.columns(3)
 with col1:
-	st.caption(("Original")
+	st.write(("Original")
 	st.image("imgs/b1.jpg", use_column_width=True)
 with col2:
-	st.caption(("ECCV 16")
+	st.write(("ECCV 16")
 	st.image("imgs/b2.jpg", use_column_width=True)
 with col3:
-	st.caption(("SIGGRAPH 17")
+	st.write(("SIGGRAPH 17")
 	st.image("imgs/b3.jpg", use_column_width=True)
 
 
