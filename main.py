@@ -266,7 +266,7 @@ with col3:
 	st.image("imgs/q3.jpg", use_column_width=True)
 
 
-st.write('.')
+st.write('A bicycle parked on the side of a road next to a dog.')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/r1.jpg", use_column_width=True)
@@ -276,7 +276,7 @@ with col3:
 	st.image("imgs/r3.jpg", use_column_width=True)
 	
 
-st.write('A close up of a person wearing a hooded jacket.')
+st.write('Three small teddy bears sitting on a bench.')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/s1.jpg", use_column_width=True)
@@ -286,7 +286,7 @@ with col3:
 	st.image("imgs/s3.jpg", use_column_width=True)
 
 	
-st.write('A black and white photo of a woman with a tie.')
+st.write('A street with a train on the tracks and a building.')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/t1.jpg", use_column_width=True)
@@ -296,7 +296,7 @@ with col3:
 	st.image("imgs/t3.jpg", use_column_width=True)
 
 
-st.write('.')
+st.write('A woman walking down a street while holding an umbrella.')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/u1.jpg", use_column_width=True)
