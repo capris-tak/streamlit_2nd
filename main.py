@@ -364,7 +364,7 @@ with col3:
 	st.image("imgs/aa3.jpg", use_column_width=True)
 	
 
-st.caption('A woman holding a baseball bat in her hands.')
+st.caption('A woman holding a baseball bat in her hands.野球のバットを手に持っている女性。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/bb1.jpg", use_column_width=True)
@@ -374,7 +374,7 @@ with col3:
 	st.image("imgs/bb3.jpg", use_column_width=True)
 
 	
-st.caption('A train yard with several train tracks and a train on one of them.')
+st.caption('A train yard with several train tracks and a train on one of them.いくつかの列車の線路とそのうちの1つに列車がある列車ヤード。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/cc1.jpg", use_column_width=True)
@@ -384,7 +384,7 @@ with col3:
 	st.image("imgs/cc3.jpg", use_column_width=True)
 
 
-st.caption('A river with rocks and a waterfall running through it.')
+st.caption('A river with rocks and a waterfall running through it.岩と滝のある川が流れています。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/dd1.jpg", use_column_width=True)
@@ -394,7 +394,7 @@ with col3:
 	st.image("imgs/dd3.jpg", use_column_width=True)
 	
 
-st.caption('A man walking down a street past a tall building.')
+st.caption('A man walking down a street past a tall building.背の高い建物を過ぎて通りを歩いている男。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/ee1.jpg", use_column_width=True)
@@ -403,7 +403,7 @@ with col2:
 with col3:
 	st.image("imgs/ee3.jpg", use_column_width=True)
 	
-st.caption('A group of men in uniform with a dog.')
+st.caption('A group of men in uniform with a dog.犬と一緒に制服を着た男性のグループ。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/ff1.jpg", use_column_width=True)
