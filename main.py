@@ -113,7 +113,7 @@ with col3:
 	st.image("imgs/b3.jpg", use_column_width=True)
 
 
-st.write('A river with a bridge crossing it and a forest in the background.それを横切る橋がある川と背景に森があります。')
+st.caption('A river with a bridge crossing it and a forest in the background.それを横切る橋がある川と背景に森があります。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/a1.jpg", use_column_width=True)
@@ -123,7 +123,7 @@ with col3:
 	st.image("imgs/a3.jpg", use_column_width=True)
 
 
-st.write('A woman taking a picture of herself with a camera.カメラで自分の写真を撮っている女性。')
+st.caption('A woman taking a picture of herself with a camera.カメラで自分の写真を撮っている女性。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/d1.jpg", use_column_width=True)
@@ -133,7 +133,7 @@ with col3:
 	st.image("imgs/d3.jpg", use_column_width=True)
 
 
-st.write('A woman sitting in a car looking out the window.窓の外を見ている車に座っている女性。')
+st.caption('A woman sitting in a car looking out the window.窓の外を見ている車に座っている女性。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/e1.jpg", use_column_width=True)
@@ -143,7 +143,7 @@ with col3:
 	st.image("imgs/e3.jpg", use_column_width=True)
 
 
-st.write('A woman sitting on a bed with a quilt.キルトと一緒にベッドに座っている女性。')
+st.caption('A woman sitting on a bed with a quilt.キルトと一緒にベッドに座っている女性。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/c1.jpg", use_column_width=True)
@@ -153,7 +153,7 @@ with col3:
 	st.image("imgs/c3.jpg", use_column_width=True)
 	
 	
-st.write('A large clock tower with a circular ring around it.周囲に円形のリングが付いた大きな時計塔。')
+st.caption('A large clock tower with a circular ring around it.周囲に円形のリングが付いた大きな時計塔。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/f1.jpg", use_column_width=True)
@@ -163,7 +163,7 @@ with col3:
 	st.image("imgs/f3.jpg", use_column_width=True)
 
 
-st.write('A woman wearing a black hat and a black coat.黒い帽子と黒いコートを着た女性。')
+st.caption('A woman wearing a black hat and a black coat.黒い帽子と黒いコートを着た女性。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/g1.jpg", use_column_width=True)
@@ -173,7 +173,7 @@ with col3:
 	st.image("imgs/g3.jpg", use_column_width=True)
 
 
-st.write('A cat sitting on a table next to a potted plant.鉢植えの植物の隣のテーブルの上に座っている猫。')
+st.caption('A cat sitting on a table next to a potted plant.鉢植えの植物の隣のテーブルの上に座っている猫。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/h1.jpg", use_column_width=True)
@@ -183,7 +183,7 @@ with col3:
 	st.image("imgs/h3.jpg", use_column_width=True)
 
 
-st.write('A tall building with lots of signs on it.標識がたくさんある高層ビル。')
+st.caption('A tall building with lots of signs on it.標識がたくさんある高層ビル。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/i1.jpg", use_column_width=True)
@@ -193,7 +193,7 @@ with col3:
 	st.image("imgs/i3.jpg", use_column_width=True)
 
 
-st.write('A building with a lot of windows and a ceiling fan.窓がたくさんあり、天井ファンがたくさんある建物。')
+st.caption('A building with a lot of windows and a ceiling fan.窓がたくさんあり、天井ファンがたくさんある建物。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/j1.jpg", use_column_width=True)
@@ -203,7 +203,7 @@ with col3:
 	st.image("imgs/j3.jpg", use_column_width=True)
 
 	
-st.write('A city street filled with lots of traffic.多くの交通で満たされた街の通り。')
+st.caption('A city street filled with lots of traffic.多くの交通で満たされた街の通り。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/k1.jpg", use_column_width=True)
@@ -213,7 +213,7 @@ with col3:
 	st.image("imgs/k3.jpg", use_column_width=True)
 
 
-st.write('A train is traveling down the tracks in a city.列車が都市の線路を下っています。')
+st.caption('A train is traveling down the tracks in a city.列車が都市の線路を下っています。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/l1.jpg", use_column_width=True)
@@ -223,7 +223,7 @@ with col3:
 	st.image("imgs/l3.jpg", use_column_width=True)
 
 	
-st.write('A large building with a clock tower in the background.')
+st.caption('A large building with a clock tower in the background.背景に時計塔がある大きな建物。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/m1.jpg", use_column_width=True)
@@ -233,7 +233,7 @@ with col3:
 	st.image("imgs/m3.jpg", use_column_width=True)
 
 
-st.write('A motorcycle parked on a street next to a building.')
+st.caption('A motorcycle parked on a street next to a building.建物の隣の通りに駐車したオートバイ。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/o1.jpg", use_column_width=True)
@@ -243,7 +243,7 @@ with col3:
 	st.image("imgs/o3.jpg", use_column_width=True)
 	
 
-st.write('A close up of a person wearing a hooded jacket.')
+st.caption('A close up of a person wearing a hooded jacket.フード付きジャケットを着ている人のクローズアップ。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/p1.jpg", use_column_width=True)
@@ -253,7 +253,7 @@ with col3:
 	st.image("imgs/p3.jpg", use_column_width=True)
 
 	
-st.write('A black and white photo of a woman with a tie.')
+st.caption('A black and white photo of a woman with a tie.ネクタイのある女性の白黒写真。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/q1.jpg", use_column_width=True)
@@ -263,7 +263,7 @@ with col3:
 	st.image("imgs/q3.jpg", use_column_width=True)
 
 
-st.write('A bicycle parked on the side of a road next to a dog.')
+st.caption('A bicycle parked on the side of a road next to a dog.犬の隣の道路の脇に駐車されている自転車。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/r1.jpg", use_column_width=True)
@@ -273,7 +273,7 @@ with col3:
 	st.image("imgs/r3.jpg", use_column_width=True)
 	
 
-st.write('Three small teddy bears sitting on a bench.')
+st.caption('Three small teddy bears sitting on a bench.ベンチに座っている3つの小さなテディベア。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/s1.jpg", use_column_width=True)
@@ -283,7 +283,7 @@ with col3:
 	st.image("imgs/s3.jpg", use_column_width=True)
 
 	
-st.write('A street with a train on the tracks and a building.')
+st.caption('A street with a train on the tracks and a building.線路と建物に電車がある通り。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/t1.jpg", use_column_width=True)
@@ -293,7 +293,7 @@ with col3:
 	st.image("imgs/t3.jpg", use_column_width=True)
 
 
-st.write('A woman walking down a street while holding an umbrella.')
+st.caption('A woman walking down a street while holding an umbrella.傘を持って通りを歩いている女性。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/u1.jpg", use_column_width=True)
@@ -304,7 +304,7 @@ with col3:
 	
 	
 
-st.write('A group of people standing around a skateboard.')
+st.caption('A group of people standing around a skateboard.スケートボードの周りに立っている人々のグループ。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/v1.jpg", use_column_width=True)
@@ -314,7 +314,7 @@ with col3:
 	st.image("imgs/v3.jpg", use_column_width=True)
 
 	
-st.write('A dog is standing on a brick sidewalk.')
+st.caption('A dog is standing on a brick sidewalk.犬がレンガの歩道に立っています。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/w1.jpg", use_column_width=True)
@@ -324,7 +324,7 @@ with col3:
 	st.image("imgs/w3.jpg", use_column_width=True)
 
 
-st.write('A group of women standing next to each other.')
+st.caption('A group of women standing next to each other.隣同士の女性のグループ。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/x1.jpg", use_column_width=True)
@@ -334,7 +334,7 @@ with col3:
 	st.image("imgs/x3.jpg", use_column_width=True)
 	
 
-st.write('A couple of people in a bathtub with mountains in the background.')
+st.caption('A couple of people in a bathtub with mountains in the background.背景に山がある浴槽にいる数人の人々。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/y1.jpg", use_column_width=True)
@@ -344,7 +344,7 @@ with col3:
 	st.image("imgs/y3.jpg", use_column_width=True)
 
 	
-st.write('A boy in a black jacket holding a baseball bat.')
+st.caption('A boy in a black jacket holding a baseball bat.野球のバットを持っている黒いジャケットを着た男の子。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/z1.jpg", use_column_width=True)
@@ -354,7 +354,7 @@ with col3:
 	st.image("imgs/z3.jpg", use_column_width=True)
 
 
-st.write('A person walking down a path with a dog.')
+st.caption('A person walking down a path with a dog.犬と一緒に道を歩いている人。')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/aa1.jpg", use_column_width=True)
@@ -364,7 +364,7 @@ with col3:
 	st.image("imgs/aa3.jpg", use_column_width=True)
 	
 
-st.write('A woman holding a baseball bat in her hands.')
+st.caption('A woman holding a baseball bat in her hands.')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/bb1.jpg", use_column_width=True)
@@ -374,7 +374,7 @@ with col3:
 	st.image("imgs/bb3.jpg", use_column_width=True)
 
 	
-st.write('A train yard with several train tracks and a train on one of them.')
+st.caption('A train yard with several train tracks and a train on one of them.')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/cc1.jpg", use_column_width=True)
@@ -384,7 +384,7 @@ with col3:
 	st.image("imgs/cc3.jpg", use_column_width=True)
 
 
-st.write('A river with rocks and a waterfall running through it.')
+st.caption('A river with rocks and a waterfall running through it.')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/dd1.jpg", use_column_width=True)
@@ -394,7 +394,7 @@ with col3:
 	st.image("imgs/dd3.jpg", use_column_width=True)
 	
 
-st.write('A man walking down a street past a tall building.')
+st.caption('A man walking down a street past a tall building.')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/ee1.jpg", use_column_width=True)
@@ -403,7 +403,7 @@ with col2:
 with col3:
 	st.image("imgs/ee3.jpg", use_column_width=True)
 	
-st.write('A group of men in uniform with a dog.')
+st.caption('A group of men in uniform with a dog.')
 col1, col2, col3 = st.columns(3)
 with col1:
 	st.image("imgs/ff1.jpg", use_column_width=True)
