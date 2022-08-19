@@ -47,7 +47,13 @@ if uploaded_image is not None:
 	#st.write(uploaded_image)
 	#st.write(type(uploaded_image))
 	#st.write(opt)
-	
+	###img = Image.open(file).convert('RGB') new_img = img.copy() new_img.thumbnail((h_size, v_size)) new_img_size = os.path.getsize(file) / 1000
+		# 画質を調整 # png if img_format == 'png': for i in range(7,10): new_img.save(conv_folder + file_name + '.png', compress_level=i)
+		#new_img_size = os.path.getsize(conv_folder + file_name + '.png') / 1000 if new_img_size > Max_size and i < 9: print(str(new_img_size) + 'KB '+ 'quality=' + str(i))
+		#os.remove(conv_folder + file_name + '.png') else: print('画質調整終了 ' + str(new_img_size) + 'KB '+ 'compress_level=' + str(i)) break # jpg elif img_format == 'jpg': for i in range(75, -1, -5): new_img.save(conv_folder + file_name + '.jpg', quality=i)
+		#new_img_size = os.path.getsize(conv_folder + file_name + '.jpg') / 1000 if new_img_size > Max_size and i > 0: print(str(new_img_size) + 'KB '+ 'quality=' + str(i))
+		#os.remove(conv_folder + file_name + '.jpg') else: print('画質調整終了 ' + str(new_img_size) + 'KB '+ 'quality=' + str(i)) break # webp elif img_format == 'webp': for i in range(80, 0, -5): new_img.save(conv_folder + file_name + '.webp', quality=i)
+		#new_img_size = os.path.getsize(conv_folder + file_name + '.webp') / 1000 if new_img_size > Max_size and i > 5: print(str(new_img_size) + 'KB '+ 'quality=' + str(i)) os.remove(conv_folder + file_name + '.webp') else: print('画質調整終了 ' + str(new_img_size) + 'KB '+ 'quality=' + str(i)) break
 	#_img = Image.open(uploaded_image)
 	#with io.BytesIO() as output:
 		#_img.save(output, format='JPEG')
@@ -76,7 +82,7 @@ if uploaded_image is not None:
 
 	# default size to process images is 256x256
 	# grab L channel in both original ("orig") and resized ("rs") resolutions
-	img = load_img(opt.img_path)
+	img = load_img(opt.img_path).convert('RGB')
 	(tens_l_orig, tens_l_rs) = preprocess_img(img, HW=(256,256))
 	if(opt.use_gpu):
 		tens_l_rs = tens_l_rs.cuda()
