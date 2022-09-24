@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 import tempfile
 import io
-import IPython
+#import IPython
 from colorizers import *
 
 st.header('Image Colorization')
