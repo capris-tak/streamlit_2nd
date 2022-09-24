@@ -4,6 +4,8 @@ from pathlib import Path
 import numpy as np
 import tempfile
 import io
+from IPython.display
+from colorizers import *
 
 st.header('Image Colorization')
 
@@ -64,7 +66,7 @@ if uploaded_image is not None:
 	import argparse
 	import matplotlib.pyplot as plt
 
-	from colorizers import *
+	
 	
 	parser = argparse.ArgumentParser()
 	parser.add_argument('-i','--img_path', type=str, default = tmp_file.name)
